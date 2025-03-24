@@ -1,0 +1,119 @@
+#include <iostream>
+
+
+
+using namespace std;
+
+//Defining variables and functions
+float mom, dad;
+
+void Input();
+
+
+void Punnett();
+
+int main()
+{
+   //Intro to code
+   cout<<"Welcome, This code makes Punnett Squares to determine the the chance for a child to be colorblind"<<endl<<endl;
+
+   Input();
+
+   Punnett();
+
+   return 0;
+}
+//function for input
+void Input()
+{
+    cout<<"Is the mother normal, colorblind or a silent carrier"<<endl;
+    cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
+    cin>>mom;
+
+    cout<<"Is the Father normal, colorblind"<<endl;
+    cout<<"1 for normal, 2 for colorblind"<<endl;
+    cin>>dad;
+}
+
+//Function to display Punnett Squares
+void Punnett()
+{
+    if (dad == 1)
+    {
+        if (mom == 1)
+        {
+        cout<<"        XB  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXB | XBY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXB | XBY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+        cout<<"There is a 0% chance for a colorblind child"<<endl;
+        }
+
+        if (mom == 2)
+        {
+        cout<<"        XB  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XBXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XBXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+
+        cout<<"There is a 50% chance for a colorblind child"<<endl;
+        }
+
+        if (mom == 3)
+        {
+        cout<<"        XB  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXB | XBY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XBXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+
+        cout<<"There is a 25% chance for a colorblind child"<<endl;
+        }
+    }
+
+
+    if (dad == 2)
+    {
+        if (mom == 1)
+        {
+        cout<<"        Xb  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXb | XBY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXb | XBY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+
+        cout<<"There is a 0% chance for a colorblind child"<<endl;
+        }
+
+        if (mom == 2)
+        {
+        cout<<"        Xb  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XbXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XbXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+
+        cout<<"There is a 100% chance for a colorblind child"<<endl;
+        }
+
+    if (mom == 3)
+        {
+        cout<<"        Xb  |  Y   "<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  XB | XBXb | XBY |"<<endl;
+        cout<<"     --------------"<<endl;
+        cout<<"  Xb | XbXb | XbY |"<<endl;
+        cout<<"     --------------"<<endl<<endl;
+
+        cout<<"There is a 50% chance for a colorblind child"<<endl;
+        }
+     }
+
+}
