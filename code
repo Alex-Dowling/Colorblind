@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 //Defining variables and functions
-float mom, dad;
+int mom, dad;
 
 void Input();
 
@@ -30,25 +31,75 @@ void Input()
     cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
     cin>>mom;
 
-     while(cin.fail())
-                {
-                cout<<"Please enter 1, 2 or 3 not a character"<<endl;
-                cin.clear();
-                cin.ignore(10000, '\n');
-                cin>>mom;
-                }
+    while(true)
+    {
+        if (cin.fail())
+        {
+            cout<<"Please enter 1, 2 or 3 not a character"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+        if (mom < 1)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        if (mom > 3)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        else if (0 < cin < 4)
+        {
+            break;
+        }
+
+    }
+
 
     cout<<endl<<"Is the Father normal, colorblind"<<endl;
     cout<<"1 for normal, 2 for colorblind"<<endl;
     cin>>dad;
 
-    while(cin.fail())
-                {
-                cout<<"Please enter 1 or 2 not a character"<<endl;
-                cin.clear();
-                cin.ignore(10000, '\n');
-                cin>>dad;
-                }
+    while(true)
+    {
+        if (cin.fail())
+        {
+            cout<<"Please enter 1, 2 or 3 not a character"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+        if (dad < 1)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        if (dad > 2)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        else if (0 < cin < 3)
+        {
+            break;
+        }
+
+    }
+
 }
 
 //Function to display Punnett Squares
