@@ -15,7 +15,7 @@ void Punnett();
 int main()
 {
    //Intro to code
-   cout<<"Welcome, This code makes Punnett Squares to determine the the chance for a child to be colorblind"<<endl<<endl;
+   cout<<"Welcome, This code makes Punnett Squares to determine the chance for a child to be colorblind"<<endl<<endl;
 
    Input();
 
@@ -30,9 +30,25 @@ void Input()
     cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
     cin>>mom;
 
+     while(cin.fail())
+                {
+                cout<<"Please enter an number not a character"<<endl;
+                cin.clear();
+                cin.ignore(10000, '\n');
+                cin>>mom;
+                }
+
     cout<<"Is the Father normal, colorblind"<<endl;
     cout<<"1 for normal, 2 for colorblind"<<endl;
     cin>>dad;
+
+    while(cin.fail())
+                {
+                cout<<"Please enter an number not a character"<<endl;
+                cin.clear();
+                cin.ignore(10000, '\n');
+                cin>>dad;
+                }
 }
 
 //Function to display Punnett Squares
@@ -117,3 +133,4 @@ void Punnett()
      }
 
 }
+
