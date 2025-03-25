@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 using namespace std;
 
 //Defining variables and functions
@@ -12,11 +10,13 @@ void Input();
 
 void Punnett();
 
+//Main Function
 int main()
 {
    //Intro to code
    cout<<"Welcome, This code makes Punnett Squares to determine the chance for a child to be colorblind"<<endl<<endl;
 
+   //Using Functions
    Input();
 
    Punnett();
@@ -32,19 +32,19 @@ void Input()
 
      while(cin.fail())
                 {
-                cout<<"Please enter an number not a character"<<endl;
+                cout<<"Please enter 1, 2 or 3 not a character"<<endl;
                 cin.clear();
                 cin.ignore(10000, '\n');
                 cin>>mom;
                 }
 
-    cout<<"Is the Father normal, colorblind"<<endl;
+    cout<<endl<<"Is the Father normal, colorblind"<<endl;
     cout<<"1 for normal, 2 for colorblind"<<endl;
     cin>>dad;
 
     while(cin.fail())
                 {
-                cout<<"Please enter an number not a character"<<endl;
+                cout<<"Please enter 1 or 2 not a character"<<endl;
                 cin.clear();
                 cin.ignore(10000, '\n');
                 cin>>dad;
@@ -133,4 +133,3 @@ void Punnett()
      }
 
 }
-
