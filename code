@@ -1,9 +1,10 @@
 #include <iostream>
 
+
 using namespace std;
 
 //Defining variables and functions
-float mom, dad;
+int mom, dad;
 
 void Input();
 
@@ -27,28 +28,78 @@ int main()
 void Input()
 {
     cout<<"Is the mother normal, colorblind or a silent carrier"<<endl;
-    cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
+    cout<<"0 for normal, 1 for colorblind, 2 for silent carrier"<<endl;
     cin>>mom;
 
-     while(cin.fail())
-                {
-                cout<<"Please enter 1, 2 or 3 not a character"<<endl;
-                cin.clear();
-                cin.ignore(10000, '\n');
-                cin>>mom;
-                }
+    while(0 < mom < 4)
+    {
+        if (cin.fail())
+        {
+            cout<<"Please enter 1, 2 or 3 not a character"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+        if (mom < 1)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        if (mom > 3)
+        {
+            cout<<"Please enter 1, 2 or 3"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>mom;
+        }
+
+        if (1 < mom < 4)
+        {
+            break;
+        }
+
+    }
+
 
     cout<<endl<<"Is the Father normal, colorblind"<<endl;
     cout<<"1 for normal, 2 for colorblind"<<endl;
     cin>>dad;
 
-    while(cin.fail())
-                {
-                cout<<"Please enter 1 or 2 not a character"<<endl;
-                cin.clear();
-                cin.ignore(10000, '\n');
-                cin>>dad;
-                }
+    while(0 < dad < 4)
+    {
+        if (cin.fail())
+        {
+            cout<<"Please enter 1 or 2 not a character"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>dad;
+        }
+        if (dad < 1)
+        {
+            cout<<"Please enter 1 or 2"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>dad;
+        }
+
+        if (dad > 2)
+        {
+            cout<<"Please enter 1 or 2"<<endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            cin>>dad;
+        }
+
+        if (0 < dad < 3)
+        {
+            break;
+        }
+
+    }
+
 }
 
 //Function to display Punnett Squares
