@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 using namespace std;
 
 //Defining variables and functions
@@ -28,7 +27,7 @@ int main()
 void Input()
 {
     cout<<"Is the mother normal, colorblind or a silent carrier"<<endl;
-    cout<<"0 for normal, 1 for colorblind, 2 for silent carrier"<<endl;
+    cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
     cin>>mom;
 
     while(0 < mom < 4)
@@ -105,6 +104,9 @@ void Input()
 //Function to display Punnett Squares
 void Punnett()
 {
+    //Key to understanding the punnett squares
+    cout<<"   XB = Normal Vision, Xb = colorblind"<<endl<<endl;
+
     if (dad == 1)
     {
         if (mom == 1)
@@ -115,7 +117,8 @@ void Punnett()
         cout<<"     --------------"<<endl;
         cout<<"  XB | XBXB | XBY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
-        cout<<"There is a 0% chance for a colorblind child"<<endl;
+        cout<<"There is a 0% chance for a colorblind male"<<endl;
+        cout<<"There is a 0% chance for a colorblind female"<<endl;
         }
 
         if (mom == 2)
@@ -127,7 +130,8 @@ void Punnett()
         cout<<"  Xb | XBXb | XbY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
 
-        cout<<"There is a 50% chance for a colorblind child"<<endl;
+        cout<<"There is a 100% chance for a colorblind male"<<endl;
+        cout<<"There is a 0% chance for a colorblind female"<<endl;
         }
 
         if (mom == 3)
@@ -139,7 +143,8 @@ void Punnett()
         cout<<"  Xb | XBXb | XbY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
 
-        cout<<"There is a 25% chance for a colorblind child"<<endl;
+        cout<<"There is a 50% chance for a colorblind male"<<endl;
+        cout<<"There is a 0% chance for a colorblind female"<<endl;
         }
     }
 
@@ -155,7 +160,8 @@ void Punnett()
         cout<<"  XB | XBXb | XBY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
 
-        cout<<"There is a 0% chance for a colorblind child"<<endl;
+        cout<<"There is a 0% chance for a colorblind male"<<endl;
+        cout<<"There is a 0% chance for a colorblind female"<<endl;
         }
 
         if (mom == 2)
@@ -167,7 +173,8 @@ void Punnett()
         cout<<"  Xb | XbXb | XbY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
 
-        cout<<"There is a 100% chance for a colorblind child"<<endl;
+        cout<<"There is a 100% chance for a colorblind male"<<endl;
+        cout<<"There is a 100% chance for a colorblind female"<<endl;
         }
 
     if (mom == 3)
@@ -179,7 +186,8 @@ void Punnett()
         cout<<"  Xb | XbXb | XbY |"<<endl;
         cout<<"     --------------"<<endl<<endl;
 
-        cout<<"There is a 50% chance for a colorblind child"<<endl;
+        cout<<"There is a 50% chance for a colorblind male"<<endl;
+        cout<<"There is a 50% chance for a colorblind female"<<endl;
         }
      }
 
