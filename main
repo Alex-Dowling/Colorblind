@@ -11,7 +11,7 @@ void Punnett();
 //Main Function
 int main()
 {
-   Defining variables
+   //Defining variables
    int mom, dad;
 
    //Intro to code
