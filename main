@@ -2,17 +2,18 @@
 
 using namespace std;
 
-//Defining variables and functions
-int mom, dad;
+//Defining functions
 
 void Input();
-
 
 void Punnett();
 
 //Main Function
 int main()
 {
+   Defining variables
+   int mom, dad;
+
    //Intro to code
    cout<<"                                       Welcome                                       |"<<endl;
    cout<<"This code makes Punnett Squares to determine the chance for a child to be colorblind |"<<endl;
