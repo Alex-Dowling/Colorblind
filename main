@@ -4,15 +4,17 @@ using namespace std;
 
 //Defining functions
 
-void Input();
+void Input(int& mom, int& dad);
 
-void Punnett();
+void Punnett(int& mom, int& dad);
+
 
 //Main Function
 int main()
 {
    //Defining variables
-   int mom, dad;
+    int mom;
+    int dad;
 
    //Intro to code
    cout<<"                                       Welcome                                       |"<<endl;
@@ -20,14 +22,14 @@ int main()
    cout<<"--------------------------------------------------------------------------------------"<<endl<<endl;
 
    //Using Functions
-   Input();
+   Input(mom, dad);
 
-   Punnett();
+   Punnett(mom, dad);
 
    return 0;
 }
 //function for input
-void Input()
+void Input(int& mom, int& dad)
 {
     cout<<"Is the mother normal, colorblind or a silent carrier"<<endl;
     cout<<"1 for normal, 2 for colorblind, 3 for silent carrier"<<endl;
@@ -105,7 +107,7 @@ void Input()
 }
 
 //Function to display Punnett Squares
-void Punnett()
+void Punnett(int& mom, int& dad)
 {
     //Key to understanding the punnett squares
     cout<<"   XB = Normal Vision, Xb = colorblind, Y = Male"<<endl<<endl;
